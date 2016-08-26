@@ -5,10 +5,16 @@
 (function (global) {
     // map tells the System loader where to look for things
     var map = {
-        'app': 'app', // 'dist',
-        '@angular': 'node_modules/@angular',
-        'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
-        'rxjs': 'node_modules/rxjs',
+            'app':                        'app',
+
+        '@angular':                   'https://npmcdn.com/@angular', // sufficient if we didn't pin the version
+        '@angular/router':            'https://npmcdn.com/@angular/router' + routerVer,
+        '@angular/forms':             'https://npmcdn.com/@angular/forms' + formsVer,
+        '@angular/router-deprecated': 'https://npmcdn.com/@angular/router-deprecated' + routerDeprecatedVer,
+        'angular2-in-memory-web-api': 'https://npmcdn.com/angular2-in-memory-web-api', // get latest
+        'rxjs':                       'https://npmcdn.com/rxjs@5.0.0-beta.6',
+        'ts':                         'https://npmcdn.com/plugin-typescript@4.0.10/lib/plugin.js',
+        'typescript':                 'https://npmcdn.com/typescript@1.9.0-dev.20160409/lib/typescript.js',
         'angular2-color-picker': 'node_modules/angular2-color-picker'
     };
     // packages tells the System loader how to load when no filename and/or no extension
